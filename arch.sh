@@ -8,15 +8,15 @@
 # lot of traffic.
 
 # Directory where the repo is stored locally. Example: /srv/repo
-target="/data/arch"
+target="/shared/hanez/arch"
 
 # Directory where files are downloaded to before being moved in place.
 # This should be on the same filesystem as $target, but not a subdirectory of $target.
 # Example: /srv/tmp
-tmp="/data/tmp"
+tmp="/shared/hanez/tmp"
 
 # Lockfile path
-lock="/tmp/syncrepo.lck"
+lock="/shared/hanez/tmp/syncrepo.lck"
 
 # If you want to limit the bandwidth used by rsync set this.
 # Use 0 to disable the limit.
