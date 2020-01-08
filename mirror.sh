@@ -7,27 +7,27 @@ echo "############################"
 
 echo "syncing alpine mirror!" 
 date
-/shared/hanez/bin/alpine.sh > /shared/hanez/log/alpine.log
+/data/bin/alpine.sh > /data/log/alpine.log
 echo "############################"
 
 echo "syncing arch mirror!" 
 date
-/shared/hanez/bin/arch.sh > /shared/hanez/log/arch.log
+/data/bin/arch.sh > /data/log/arch.log
 echo "############################"
 
 echo "syncing artix mirror!" 
 date
-/shared/hanez/bin/artix.sh > /shared/hanez/log/artix.log
+/data/bin/artix.sh > /data/log/artix.log
 echo "############################"
 
 echo "syncing blackarch mirror!" 
 date
-/shared/hanez/bin/blackarch.sh > /shared/hanez/log/blackarch.log
+/data/bin/blackarch.sh > /data/log/blackarch.log
 echo "############################"
 
 echo "syncing fdroid mirror!" 
 date
-/shared/hanez/bin/fdroid.sh > /shared/hanez/log/fdroid.log
+/data/bin/fdroid.sh > /data/log/fdroid.log
 echo "############################"
 
 echo "syncing mirrors finished"
