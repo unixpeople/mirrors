@@ -15,6 +15,11 @@ date
 /data/bin/arch.sh > /data/log/arch.log
 echo "############################"
 
+echo "syncing archstrike mirror!" 
+date
+/data/bin/archstrike.sh > /data/log/archstrike.log
+echo "############################"
+
 echo "syncing artix mirror!" 
 date
 /data/bin/artix.sh > /data/log/artix.log
