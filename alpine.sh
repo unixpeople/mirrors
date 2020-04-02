@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # make sure we never run 2 rsync at the same time
-lockfile="/tmp/alpine-mirror.lock"
+lockfile="/data/tmp/alpine-mirror.lock"
 if [ -z "$flock" ] ; then
   exec env flock=1 flock -n $lockfile "$0" "$@"
 fi

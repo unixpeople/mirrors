@@ -16,7 +16,7 @@ target="/data/mirrors/arch"
 tmp="/data/tmp"
 
 # Lockfile path
-lock="/data/tmp/syncrepo.lck"
+lock="/data/tmp/arch-mirror.lock"
 
 # If you want to limit the bandwidth used by rsync set this.
 # Use 0 to disable the limit.
