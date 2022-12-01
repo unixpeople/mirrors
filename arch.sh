@@ -28,12 +28,13 @@ bwlimit=0
 # rsync://rsync.archlinux.org/ftp_tier1
 # Otherwise chose a tier 1 mirror from this list and use its rsync URL:
 # https://www.archlinux.org/mirrors/
-source_url='rsync://mirror.23media.de/archlinux/'
+#source_url='rsync://mirror.23media.de/archlinux/'
+source_url='rsync://ftp.halifax.rwth-aachen.de/archlinux/'
 
 # An HTTP(S) URL pointing to the 'lastupdate' file on your chosen mirror.
 # If you are a tier 1 mirror use: http://rsync.archlinux.org/lastupdate
 # Otherwise use the HTTP(S) URL from your chosen mirror.
-lastupdate_url='http://mirror.23media.de/archlinux/lastupdate'
+lastupdate_url='https://ftp.halifax.rwth-aachen.de/archlinux/lastupdate'
 
 #### END CONFIG
 
@@ -44,7 +45,7 @@ exec 9>"${lock}"
 flock -n 9 || exit
 
 rsync_cmd() {
- local -a cmd=(rsync -rtlH --safe-links --delete-after --verbose "--timeout=600" "--contimeout=60" -p \
+ local -a cmd=(rsync -rlptH --safe-links --verbose --delete-delay --delay-updates "--timeout=600" "--contimeout=60" -p \
   --delay-updates --no-motd "--temp-dir=${tmp}")
 
 # if stty &>/dev/null; then
